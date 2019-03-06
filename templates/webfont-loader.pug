@@ -1,0 +1,13 @@
+// https://github.com/typekit/webfontloader
+// https://www.cdnplanet.com/blog/faster-google-webfonts-preconnect/
+link(rel='preconnect' href='https://fonts.gstatic.com/' crossorigin)
+script.
+  WebFontConfig = {
+    google: { families: [ 'Roboto:400,500,700:latin-ext', 'Material+Icons' ] }
+  };
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+    wf.async = true;
+    s.parentNode.insertBefore(wf, s);
+  })(document);

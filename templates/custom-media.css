@@ -1,0 +1,19 @@
+/*
+Ezzel a fájllal nincs semmi dolgunk, a webpack húzza be a postcss-en keresztül, hogy tudjuk használni az alábbi syntax-ot:
+
+@media (--sm-viewport)
+
+*/
+
+@custom-media --sm-viewport only screen and (min-width: 576px);
+@custom-media --md-viewport only screen and (min-width: 768px);
+@custom-media --lg-viewport only screen and (min-width: 992px);
+@custom-media --xl-viewport only screen and (min-width: 1200px);
+@custom-media --xxl-viewport only screen and (min-width: 1680px);
+
+@custom-media --xs-only only screen and (max-width: 575px);
+@custom-media --sm-only only screen and (min-width: 576px) and (max-width: 767px);
+@custom-media --md-only only screen and (min-width: 768px) and (max-width: 991px);
+@custom-media --lg-only only screen and (min-width: 992px) and (max-width: 1199px);
+@custom-media --xl-only only screen and (min-width: 1200px) and (max-width: 1679px);
+@custom-media --xxl-only only screen and (min-width: 1680px);
