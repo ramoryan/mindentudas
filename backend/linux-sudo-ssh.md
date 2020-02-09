@@ -11,7 +11,7 @@
 
 ### port biztosítása
 
-A default a `22`-es TCP port. Ezt érdemes átállítani valami másra, pl.: `6622`
+A default a `22`-es TCP port. Ezt érdemes átállítani valami másra, pl.: `6666`
 A tűzfal beállításainál ne felejtsd el beállítani az új portot!
 
 ### kulcs generálása
