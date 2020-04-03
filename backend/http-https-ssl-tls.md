@@ -56,7 +56,7 @@ Ahhoz, hogy az oldalunkat https-en keresztül elérhetővé tegyük, a `Let's en
 
   * Végül futtasd le a parancsot
     * NE root-ként futtasd, hanem használd a sudo-t!
-    * sudo certbot certonly --webroot -w /var/www/*WEBLAP*/ -d *DOMAIN*
+    * sudo certbot certonly --webroot -w /var/www/*WEBLAP*/ -d *DOMAIN* -d www.*DOMAIN*
       * `--test-cert` flaggel érdemes tesztelni először
         * ha igy működik, akkor `--force-renewal` -al élessé tudod tenni
 
@@ -65,6 +65,10 @@ Ahhoz, hogy az oldalunkat https-en keresztül elérhetővé tegyük, a `Let's en
 
   * Állítsd be a 80-as portról 443-ra való átirányítást! (következő pont)
 
+  * Összes certificate megújítása
+    * `sudo certbot renew --force-renewal --dry-run`
+      * Ha ez hiba nélkül lefut, akkor a `--dry-run` nélkül futtasd meg újra.
+
   * Ha valamikor valamiért kézzel kell megújítanod a certet
     * használd a `--force-renewal` flaget
     * `/etc/init.d/nginx/reload`, hogy újraolvassa a certificate fájlt
@@ -72,6 +76,12 @@ Ahhoz, hogy az oldalunkat https-en keresztül elérhetővé tegyük, a `Let's en
   * Ha a kézi (vagy autotmatikus) megújításnál probléma adódna
     * `/etc/letsencrypt/renewal/*FILENAME*.conf/` fájlban ellenőrízd, hogy a `path`-ek valóban léteznek-e
       * ez a hiba akkor fordulhat elő, ha a cert beállítása után megváltoztattad a root könyvtárat
+
+  * Certificate kiegészítése
+    * sudo certbot certonly --webroot -w /var/www/*weblap* --expand -d *DOMAIN*,*DOMAIN2*,*DOMAIN3*
+
+  * Összes certificate listázása
+    * `certbot certificates`
 
 ### HTTP (80) -> HTTPS (443)
 

@@ -93,3 +93,13 @@ TODO: egy példa 5-ről 7-re átállásra, éles, futó környezetben
 ## Frameworkok, Library-k
 
 TODO: nagyobb / jobb frameworkok és library-k (pl.: routing, secureheader, stb.) ismertetője
+
+## Fájlfeltöltés, 413-as hiba
+
+Hozz létre egy `.user.ini` fájlt a belépési pontod mellé, majd
+
+```ini
+file_uploads = On
+upload_max_filesize = 64M
+post_max_size = 64M
+```

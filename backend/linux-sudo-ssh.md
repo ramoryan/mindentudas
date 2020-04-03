@@ -14,7 +14,7 @@
 A default a `22`-es TCP port. Ezt érdemes átállítani valami másra, pl.: `6622`
 A tűzfal beállításainál ne felejtsd el beállítani az új portot!
 
-### kulcs generálása
+### kulcs generálása - csak akkor kell, ha még nincs
 
 [keygen](https://www.ssh.com/ssh/keygen/)
 
@@ -30,6 +30,13 @@ Majd felmásoljuk a .pub végződésűt a serverre és konfiguráljuk:
 ```bash
 ssh-copy-id -i ~/.ssh/FILENAME USER@HOST
 ```
+
+### Meglévő userek
+
+Csinálj a `home` könyvtáradban egy `.ssh` könyvtárat.
+Abban csinálj egy `authorized_keys` fájlt.
+Ebbe másold a publikus kulcso(ka)t.
+Ha PUTTY-al jössz, ne felejtsd el beállítani a private kulcsot az adott session-nél!
 
 ### sudoer user
 
@@ -49,7 +56,7 @@ sudo /etc/init.d/sshd status
 
 ### root user és password login kikapcsolás
 
-Miután sikerült a publikus kulcsot beállítani, a serveren a `/etc/sshd_config` fájlba állítsd be az alábbiakat:
+Miután sikerült a publikus kulcsot beállítani, a serveren a `/etc/ssh/sshd_config` fájlba állítsd be az alábbiakat:
 
 ```
 PermitRootLogin no
@@ -63,6 +70,13 @@ AuthenticationMethods publickey
 Majd indítsd újra az sshd szervízt: `/etc/init.d/sshd restart`
 
 TODO: ezekkel a beállításokkal az alábbiakat éred el
+
+### időzóna beállítása
+
+```
+echo "Europe/Budapest" > /etc/timezone
+dpkg-reconfigure -f noninteractive tzdata
+```
 
 ### ip limit
 

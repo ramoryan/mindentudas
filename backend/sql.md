@@ -16,6 +16,8 @@ CREATE DATABASE dbname CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 ## user / password
 
+[csinálj egy erős passt!](https://passwordsgenerator.net/)
+
 ```sql
 CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON username.* TO 'dbname'@'localhost';

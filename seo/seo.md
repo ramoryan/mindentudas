@@ -15,7 +15,7 @@
 - head
   - legyen title tag-ed, maximum `60` karakterrel
     - Az oldal neve, szlogenje
-      - Normál karaktereken kívül kötőjel (-), kettőspon (:), vagy a pipe karakter (|) lehet.
+      - Normál karaktereken kívül kötőjel (-), kettőspont (:), vagy a pipe karakter (|) lehet.
 
   - legyen meta description tagedet, maximum `160` karakterrel
     - Az oldal tartalmának 1-2mondatos összefoglalását kell az elembe elhelyezni.

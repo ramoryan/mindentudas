@@ -7,7 +7,7 @@
 
 - X-UA-Compatible
   - a régi IE 8/9/10 -nek lehet megadni, hogy a legújabb motorral renderelje le az oldalt.
-  - IE11-től már nincs nem kell
+  - IE11-től már nem kell
 
 - title
   - kötelező megadni
@@ -54,6 +54,16 @@
   - method
   - csfr token
     - TODO: magyarázat, php-s megoldás -> link
+
+## no-cache
+
+```html
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+```
 
 TODO: https://www.link-assistant.com/news/html-meta-tags-for-seo.html
 TODO: opengraph, twitter, ikonok, robots, canonical

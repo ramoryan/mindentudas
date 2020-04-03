@@ -72,6 +72,7 @@ A [.editorconfig](https://editorconfig.org/) fájl leírása.
 - [ssl test](https://www.ssllabs.com/ssltest/)
 - [header](https://securityheaders.com/)
 - [google speedtest](https://developers.google.com/speed/pagespeed/insights/)
+- [webpagetest](https://www.webpagetest.org/)
 - [webhint](https://webhint.io/scanner/)
 - [webdev](https://web.dev/measure)
 - [phpchecklist](https://www.sqreen.io/checklists/php-security-checklist)
@@ -80,3 +81,4 @@ A [.editorconfig](https://editorconfig.org/) fájl leírása.
   - [seositecheckup](https://seositecheckup.com)
 - [favicon](https://realfavicongenerator.net/)
 - [hsts](https://hstspreload.org/)
+- [csp-evaluator](https://csp-evaluator.withgoogle.com/)
