@@ -1,19 +1,17 @@
-# Biztonság, teljesítmény, SEO
+# Biztonság, frontend, backend, teljesítmény, SEO, stb. - Best practices
 
 `Filter input, escape output` - ősi kínai közmondás
 
 Összegyűjtött tudásanyag az adott témákban.
 Hasznos cikkek, kódrészletek, esettanulmányok, toolok mérésekhez.
 
-## Általánosságban
+## Biztonság
 
 `Whitelist over blacklist` - Hszi Csin-ping, kínai politikus, a Kínai Népköztársaság elnöke
 
 - [Defense in depth](https://en.wikipedia.org/wiki/Defense_in_depth_%28computing%29)
 - [blacklist - whitelist](https://blog.finjan.com/blacklisting-vs-whitelisting-understanding-the-security-benefits-of-each/)
-
 - [támadási lehetőségek](/attacks.md)
-- [könyvtárszerkezet](/structure.md)
 
 ## Frontend
 
@@ -59,6 +57,7 @@ Ebben a könyvtárban az adott témakörökhöz tartozó `best practice` fájlok
 
 ## Egyéb
 
+- [könyvtárszerkezet](/structure.md)
 - [header](/header.md)
 - [robots](/robots.md)
 - [SEO](/seo.md)
